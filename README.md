@@ -15,7 +15,7 @@ The objective is to create a stochasitc process (using averages), meaning we hav
 3) the size distribution of the clusters
 4) the percolation threshold
 ```
-The method checks whether two spheres intersect using the distance between their centers (less that 2R). It involves keeping track of the clusters to which the spheres belong using a "find union" algorithm in which we "find" where they belong and if the Spheres belong to two different clusters, we merge the clusters they belong to ("union"). We repeat this until we have a large enough N.
+The method checks whether two spheres intersect using the distance between their centers (less that 2R). It involves keeping track of the clusters to which the spheres belong using a "find union" algorithm in which we "find" the cluster they belong to (by finding the parent node) and if the Spheres belong to two different clusters, we merge the clusters they belong to ("union"). We repeat this until we have a large enough N.
 
 The data structure involved is a tree, most "find union" methods involve a tree data structure to represent growing clusters. Each cluster is stored as a separate tree.The spheres (which belong to a paticular cluster) are considered the nodes of a tree.
 
