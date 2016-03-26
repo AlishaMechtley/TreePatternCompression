@@ -4,10 +4,8 @@ Created on Jan 15, 2012
 @author: Alisha Rossi
 '''
 # Alisha Rossi
-# Homework 1
 ######################### make sure all parents in parent set are root nodes (with remove)
 ######################### and all smaller clusters are added to larger ones
-#import sys
 import random
 
 class Node:
@@ -66,17 +64,13 @@ for i in range(5):
     if len(neighborList)==1:                                                # if there's only one neighbor
         if neighborList[0].parent is not None:                              # and it has a parent
             myNode.setParent(neighborList[0].parent)                        # then the neighbor's parent becomes myNode's parent
-            print "My parent is my neighbor's " +str(neighborList[0]) + " parent: " + str(myNode.parent)
         else:                                                               # or if the neighbor has no parent, it is a root and
             myNode.setParent(neighborList[0])                               # that gets a(nother) child
-            print "My neighbor: " + str(myNode.parent)  + " is now my parent"
-                                             
+
     elif len(neighborList)>1:                                               # if more than one neighbor exists
         for neighbor in neighborList:                                       # for each neighbor
-            print "neighbor is " + str(neighbor)
             try: 
                 if neighbor.parent is not None:                             # NEIGHBOR HAS A PARENT
-                    print "neighbor.parent is " + str(neighbor.parent)
                     if myNode.parent is not None:                            # MY NODE HAS A PARENT
                         if myNode.parent != neighbor.parent:                # NEIGHBORS PARENT IS NOT ALREADY MY PARENT
                             if len(neighbor.parent.children)>len(myNode.parent.children):     # NEIGHBOR'S PARENT HAS MORE CHILDREN THAN MINE
@@ -86,11 +80,9 @@ for i in range(5):
                                 neighborParentSet.add(neighbor.parent)
                                 numClusters=numClusters-1
                             else: 
-                                print "NEIGHBORS PARENT DOES NOT HAVE MORE CHILDREN THAN MY PARENT"
                                 neighborParentSet.remove(neighbor.parent)
                                 reCluster(neighbor.parent, myNode.parent)
                                 numClusters=numClusters-1
-                        else: print " NEIGHBORS PARENT IS ALREADY MY PARENT"
                     else: 
                         print "MY NODE HAS NO PARENT"
                         myNode.parent=neighbor.parent
@@ -105,14 +97,11 @@ for i in range(5):
                                 myNode.parent=neighbor
                                 numClusters=numClusters-1
                             else: 
-                                print "NEIGHBOR DOES NOT HAVE MORE CHILDREN THAN MY PARENT"
                                 neighborParentSet.remove(neighbor.parent)
                                 reCluster(neighbor, myNode.parent)
                                 myNode.parent=neighbor
                                 numClusters=numClusters-1
-                        else: print "MY NODE'S PARENT IS ALREADY MY NEIGHBOR"    
                     else: #myNode.parent is None:
-                        print "MY NODE HAS NO PARENT"
                         myNode.parent=neighbor
                           
              
@@ -129,7 +118,6 @@ for i in range(5):
                 print "exception occured"
                 
     else:                                                   # if myNode's parent is not reset
-        print "I have no neighbors"
         numClusters+=1                                      # myNode is stays a parent                          
 
     #broodSize=0           

@@ -5,9 +5,7 @@ Created on Jan 15, 2012
 @author: Alisha Rossi
 '''
 # Alisha Rossi
-# Homework 1
 
-#import sys
 import random
 
 
