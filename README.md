@@ -35,7 +35,6 @@ The data structure involved is a tree, most "find union" methods involve a tree 
 *Figure 1: An example of the tree structure described, here representing two clusters. The shaded nodes are the root nodes and the arrows represent pointers. When a “bond” is added (dotted line in center) that joins nodes which belong to different clusters (i.e., whose pointers lead to different root nodes), the two clusters must be amalgamated by making one (left) a subtree of the other (right). This is achieved by adding a new pointer from the root of one tree to the root of the other.*
 
 
-
 These steps are repeated until we have a single large cluster. At each step during the run, the tree structures on the lattice correctly describe all of the clusters of joined sites, allowing us to evaluate observable quantities of interest. For example, if we are interested in the size of the largest cluster on the lattice as a function of N, we simply keep track of the largest cluster size we have seen during the course of the algorithm.
 
 
@@ -55,7 +54,7 @@ I carried out the simulation by increasing N until there was a single large clus
  ![Figure2](https://raw.githubusercontent.com/AlishaMechtley/TreePatternCompression/master/images/Results.png)
 
 
-Improvement Note: There is a formula for the periodic Euclidian distance which involves a modulus and is much less time consuming than using conditional (if) statements or taking the minimum of 3 distances between every two nodes (like I have done). Using any precompiled library would improve the computational cost.  
+Improvement Note: There is a formula for the periodic Euclidian distance which involves a modulus and is much less time consuming than using conditional (if) statements or taking the minimum of 3 distances between every two nodes (like I have done). Using any precompiled library would improve the computational cost. There is currently no periodic distance algorithm available in Numpy or Scipy. 
 
 I generate plots of (i) the average number of clusters as a function of N and the average size of the largest cluster as a function of N for N = 10,100,1000, and 10000. I then computed averages from 1000 different experiments at a given N.
 
