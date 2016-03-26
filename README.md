@@ -15,7 +15,7 @@ The objective is to create a stochasitc process (using averages), meaning we hav
 3) the size distribution of the clusters
 4) the percolation threshold
 
-The method checks whether two spheres intersect using the distance between their centers (less that 2R). It involves keeping track of the clusters to which the spheres belong using a "find union" algorithm in which we "find" where they belong and if the sheres belong to two different clusters, we merge the clusters they belong to ("union"). We repeat this until we have a large enough N.
+The method checks whether two spheres intersect using the distance between their centers (less that 2R). It involves keeping track of the clusters to which the spheres belong using a "find union" algorithm in which we "find" where they belong and if the Shperes belong to two different clusters, we merge the clusters they belong to ("union"). We repeat this until we have a large enough N.
 
 The data structure involved is a tree, most "find union" methods involve a tree data structure to represent growing clusters. Each cluster is stored as a separate tree.The spheres (which belong to a paticular cluster) are considered the nodes of a tree.
 
@@ -61,35 +61,35 @@ I generate plots of (i) the average number of clusters as a function of N and th
 
 Here are the plots for the average number of clusters as a function of the number of spheres (N) for N = 10; 100; 1000, and 10000.  The plot appears linear for N=10 and begins to curve downward as N increases.
 
- ![Figure2](https://raw.githubusercontent.com/AlishaMechtley/TreePatternCompression/master/images/ClustersVsSheres10.png)
+ ![Figure2](https://raw.githubusercontent.com/AlishaMechtley/TreePatternCompression/master/images/ClustersVsShperes10.png)
  
 Figure 3: Number of clusters as a function of N for N = 10
 
- ![Figure3](https://raw.githubusercontent.com/AlishaMechtley/TreePatternCompression/master/images/ClustersVsSheres100.png)
+ ![Figure3](https://raw.githubusercontent.com/AlishaMechtley/TreePatternCompression/master/images/ClustersVsShperes100.png)
 Figure 4: Number of clusters as a function of N for N = 100
 
- ![Figure4](https://raw.githubusercontent.com/AlishaMechtley/TreePatternCompression/master/images/ClustersVsSheres1000.png)
+ ![Figure4](https://raw.githubusercontent.com/AlishaMechtley/TreePatternCompression/master/images/ClustersVsShperes1000.png)
 
 Figure 5: Number of clusters as a function of N for N = 1000.
 
- ![Figure5](https://raw.githubusercontent.com/AlishaMechtley/TreePatternCompression/master/images/ClustersVsSheres10000.png)
+ ![Figure5](https://raw.githubusercontent.com/AlishaMechtley/TreePatternCompression/master/images/ClustersVsShperes10000.png)
 
 Figure 6: Number of clusters as a function of N for N = 10000
 
 Here are the plots for the average size of the largest cluster as a function of N. For N = 10; 100; 1000, and 10000.  I computed the averages for 175 of the 1000 different experiments  at a given N.
 
-  ![Figure6](https://raw.githubusercontent.com/AlishaMechtley/TreePatternCompression/master/images/ClusterSizeVsSheres10.png)
+  ![Figure6](https://raw.githubusercontent.com/AlishaMechtley/TreePatternCompression/master/images/ClusterSizeVsShperes10.png)
 
 Figure 7: Average size of the largest cluster as a function of N for N = 10
  
-  ![Figure7](https://raw.githubusercontent.com/AlishaMechtley/TreePatternCompression/master/images/ClusterSizeVsSheres100.png)
+  ![Figure7](https://raw.githubusercontent.com/AlishaMechtley/TreePatternCompression/master/images/ClusterSizeVsShperes100.png)
 
 Figure 8: Average size of the largest cluster as a function of N for N = 100
 
- ![Figure8](https://raw.githubusercontent.com/AlishaMechtley/TreePatternCompression/master/images/ClusterSizeVsSheres1000.png)
+ ![Figure8](https://raw.githubusercontent.com/AlishaMechtley/TreePatternCompression/master/images/ClusterSizeVsShperes1000.png)
 
 Figure 9:  Average size of the largest cluster as a function of N for N = 1000
  
-  ![Figure9](https://raw.githubusercontent.com/AlishaMechtley/TreePatternCompression/master/images/ClusterSizeVsSheres1000.png)
+  ![Figure9](https://raw.githubusercontent.com/AlishaMechtley/TreePatternCompression/master/images/ClusterSizeVsShperes1000.png)
 
 Figure 10: Average size of the largest cluster as a function of N for N = 10000
